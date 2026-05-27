@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Merriweather:wght@300;400;700&display=swap');
+
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="%23c9a03d"><path d="M12 2L15 8.5L22 9.5L17 14L18.5 21L12 17.5L5.5 21L7 14L2 9.5L9 8.5L12 2Z"/></svg>'), auto;
+  }
+  body {
+    @apply bg-dark text-parchment font-merriweather;
+  }
+  ::selection {
+    @apply bg-gold text-dark;
+  }
+}
+
+@layer components {
+  .magical-border {
+    position: relative;
+    border: 1px solid rgba(201, 160, 61, 0.3);
+    border-radius: 0.5rem;
+    box-shadow: 0 10px 15px -3px rgba(201, 160, 61, 0.1), 0 4px 6px -4px rgba(201, 160, 61, 0.05);
+  }
+  .glow-text {
+    @apply text-gold animate-glow;
+  }
+}
